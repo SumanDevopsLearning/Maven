@@ -1,124 +1,3 @@
-Linux
-git and github
-shell scripting
-
-
-maven Build tool
------------------
-Why you need to use?
---------------------
-
---> explain (developer--->github--->maven--->tomcat)
-
-Build: Build is a process of automating the packages(jar, war, ear)
-
---> Maven is a popular build automation and project management tool used primarily for Java projects.
---> Developed by the Apache Software Foundation.
---> Maven is an open source build tool.
---> Maven is a platform independent.
---> Maven is not an executable software(.exe), It is in the zip/tar.gz (download and extract)
---> if you want to download maven use this link below
-   https://maven.apache.org/download.cgi  --> download maven zip file
-
-
-
-
-
-What are the build tools?
--------------------------
-java
-----
-Ant
-maven
-gradle
-
-python
-------
-pybuilder
-
-.net
-----
-MS Build
-Nant
-
-Ruby
-----
-Rake
-
-go
---
-go build tool
-
-
-what is jar, war, ear ?
------------------------
-
-1. standalone applications [Jar]
-------------------------
---> Java code
---> Jar contains (.class files)
-
-2. web applications [war]
--------------------
---> JAVA code + web content (HTML/CSS3/JS/images)
---> war contains( jar+ HTML/CSS3/JS/Images)
-
-
-3. enterprise applications[ear]
---------------------------
---> JAVA code + web content (HTML/CSS3/JS)+ standalone and web modules
---> ear contains( jar+war+HTML/CSS3/JS/Images+modules)
-
---> if you want to download maven use this link below
-   https://maven.apache.org/download.cgi
-
-
-
-
-Maven directory structure
---------------------------
-bin ---> contains binary files [mvn, etc]
-
-boot ---> contains jar files used at runtime 
-
-conf ---> configuration files[settings.xml]
-
-lib ---> contains library files[jars]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-default xml file names for build scripts
-=========================================
-
-pom.xml ----> maven
-build.xml --->ant
-build.gradle   [we can not use xml for gradle]  --->gradle
-
-
-
-
-
-
-
-
-
-
-
 maven installation
 ===================
 System Requirements 
@@ -130,14 +9,13 @@ System Requirements
 
 NOTE: All the external software are stored in /opt directory
 
+================================================================
 
 step 0: Launch an EC2 machine & connect to that machine
 
 
 step 1: sudo su -  [switch to root user]
 ------
-
-
 
 step 2: Install java
 ------
@@ -154,15 +32,10 @@ sudo yum search java | grep -i OpenJDK
 
 java -version 
 
-
 java 21
 --------
 
 sudo yum install java-21-openjdk-devel -y
-
-
-
-
 
 step 3: Install maven 
 ------
@@ -182,27 +55,17 @@ cd /opt/
 yum install wget unzip tree git -y
 
 2) Download the Maven Software
-
-
-
-wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.zip
- 
-wget https://dlcdn.apache.org/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.zip
-
-wget https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.zip
-
+wget https://dlcdn.apache.org/maven/maven-3/3.9.14/binaries/apache-maven-3.9.14-bin.zip
 
 unzip apache-maven-3.9.11-bin.zip
-
 
 3) Set the class path/Environmental Variable
 
 # User specific environment and startup programs
 
-
 vi ~/.bash_profile  ---> add below two statements
 
-export M2_HOME=/opt/apache-maven-3.9.12
+export M2_HOME=/opt/apache-maven-3.9.14
 export PATH=$PATH:$M2_HOME/bin
 
 mvn -version or mvn -v ----> Not installed , you need to load 
